@@ -1,2 +1,2 @@
 # git-angular-cli
-practice project 
+project for practice purpose.
