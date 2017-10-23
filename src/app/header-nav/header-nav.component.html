@@ -32,11 +32,11 @@
             <img src="{{imgBaseUrl}}/IconsMain_v02.01_NewEmployee.png" height="30" width="30"/>
           </div>
           <span style="padding:5px 8px;" class="input-group-addon no_bdr no_bg">
-            <span class="fa fa-caret-down cp" [mdMenuTriggerFor]="switchUser"></span>
-            <md-menu #switchUser="mdMenu">
-              <button md-menu-item disabled>Log In</button>
-              <button md-menu-item>Log Out</button>
-            </md-menu>
+            <span class="fa fa-caret-down cp" [matMenuTriggerFor]="switchUser"></span>
+            <mat-menu #switchUser="matMenu">
+              <button mat-menu-item disabled>Log In</button>
+              <button mat-menu-item>Log Out</button>
+            </mat-menu>
           </span>
         </div> 
     </div>

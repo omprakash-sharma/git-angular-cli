@@ -22,21 +22,21 @@
           </div>
         </div>
         <div class="dis_table_cell" style="width:15%;">
-          <i class="material-icons cp" [mdMenuTriggerFor]="filter">photo_filter</i>
-          <md-menu #filter="mdMenu">
-            <button md-menu-item>
+          <i class="material-icons cp" [matMenuTriggerFor]="filter">photo_filter</i>
+          <mat-menu #filter="matMenu">
+            <button mat-menu-item>
               <i class="material-icons vrt_align">flip_to_back</i>
               <span class="vrt_align">Invert Theme</span>
             </button>
-            <button md-menu-item disabled>
+            <button mat-menu-item disabled>
               <i class="material-icons vrt_align">group_add</i>
               <span class="vrt_align">Create Group</span>
             </button>
-            <button md-menu-item>
+            <button mat-menu-item>
               <i class="material-icons vrt_align">notifications_off</i>
               <span class="vrt_align">Disable alerts</span>
             </button>
-          </md-menu>
+          </mat-menu>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
                   <div class="fs_12 u-noWrapWithEllipsis"><img height="18" width="18" src="{{imgBaseUrl}}/IconsMain_v03.01_Category_Red.png"/>left 7min ago</div> 
                 </div>
                 <div class="u-select">
-                    <md-checkbox [(ngModel)]="selectedUser[users.userId]"></md-checkbox>
+                    <mat-checkbox [(ngModel)]="selectedUser[users.userId]"></mat-checkbox>
                 </div>
             </div>
           </div>
