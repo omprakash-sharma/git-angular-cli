@@ -1,0 +1,47 @@
+<div class="fh">
+  <div class="dis_table fh">
+    <div class="dis_table_cell bdr_Rt cw">
+      <img src="{{imgBaseUrl}}/IconsMain_v02.01_PushcordIcon.png" height="30" width="30"/>
+    </div>
+    <div class="dis_table_cell bdr_Rt" style="width:calc(100% - 450px - 60px);">
+      <div class="ps_rlt">
+        <input class="form-control cust_search_input" placeholder="search...">
+        <span class="ps_abs" style="right:10px;top:5px;"> <img src="{{imgBaseUrl}}/IconsMain_v02.01_Search.png" height="25" width="25"/></span>
+      </div>
+    </div>
+    <div class="dis_table_cell cw">
+      <img src="{{imgBaseUrl}}/IconsMain_v02.01_InstaceNormal.png" height="30" width="30"/>
+    </div>
+    <div class="dis_table_cell cw">
+        <img src="{{imgBaseUrl}}/IconsMain_v02.01_KoiskNormal.png" height="30" width="30"/>
+    </div>
+    <div class="dis_table_cell cw">
+        <img src="{{imgBaseUrl}}/IconsMain_v02.01_EntitySelected.png" height="30" width="30"/>
+    </div>
+    <div class="dis_table_cell cw">
+        <img src="{{imgBaseUrl}}/IconsMain_v02.01_DashboardNormal.png" height="30" width="30"/>
+    </div>
+    <div class="dis_table_cell cw">&nbsp;</div>
+    <div class="dis_table_cell cw">&nbsp;</div>
+    <div class="dis_table_cell cw">&nbsp;</div>
+    <div class="dis_table_cell cw">&nbsp;</div>
+    <div class="dis_table_cell bdr_Rt" style="width:60px;">
+        <!-- <img src="{{imgBaseUrl}}/IconsMain_v02.01_NewEmployee.png" height="30" width="30"/> -->
+        <div class="input-group">
+          <div class="form-control no_bdr" style="padding:5px 0;" routerLink="personal">
+            <img src="{{imgBaseUrl}}/IconsMain_v02.01_NewEmployee.png" height="30" width="30"/>
+          </div>
+          <span style="padding:5px 8px;" class="input-group-addon no_bdr no_bg">
+            <span class="fa fa-caret-down cp" [mdMenuTriggerFor]="switchUser"></span>
+            <md-menu #switchUser="mdMenu">
+              <button md-menu-item disabled>Log In</button>
+              <button md-menu-item>Log Out</button>
+            </md-menu>
+          </span>
+        </div> 
+    </div>
+    <div class="dis_table_cell cw">
+      <img src="{{imgBaseUrl}}/IconsMain_v04.01_Connection_Orange.png" height="30" width="30"/>
+    </div>
+  </div>
+</div>

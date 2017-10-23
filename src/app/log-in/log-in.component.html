@@ -1,0 +1,25 @@
+<div class="form-wrapper" (onSuccessfulLogIn)="onSuccessfulLogIn($event)">
+  <h3>Log In</h3>
+  <form name="logInForm" novalidate="" (submit)="logInUser($event)">
+    <div class="mb-2">
+      <label>User Name</label>
+      <input type="text" class="form-control cust_en_input" name="name"  placeholder="Enter your name" required/>
+      <!-- <span class="error" ng-show="logInForm.name.$touched && logInForm.name.$error.required">*required field</span> -->
+    </div>
+    
+    <div class="mb-2">
+      <label>Password</label>
+      <input type="Password" class="form-control cust_en_input" name="password"  placeholder="Password" required/>
+      <!-- <span class="error" ng-show="userForm.password.$touched && userForm.password.$error.required">*required field</span> -->
+    </div>
+    <div class="mb-2">
+      <input type="checkbox" name="unAuth" id="unAuth" [(ngModel)]="isUnAuth"/>
+      <label for="unAuth">&nbsp;LogIn with Un-Authorized User.</label>
+      
+      <!-- <span class="error" ng-show="userForm.password.$touched && userForm.password.$error.required">*required field</span> -->
+    </div>
+    <div class="text-right"><a href="#">Forget password</a></div>
+    <button class="btn cust_btn success" type="submit">Sign In</button>
+  </form>
+</div>
+

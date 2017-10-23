@@ -1,0 +1,15 @@
+<div id="slide-menu" class="slide-nav">
+  <div class="bg_w">
+    <ul>
+      <li><a class="expand-nav-view" (click)="toggleNavView($event)">&#62;</a></li>
+      <li><a href="/home"><img src="{{imgBaseUrl}}/IconsMain_v02.01_InstaceNormal.png" height="30" width="30"/>Home</a></li>
+      <li><a href="/home"><img src="{{imgBaseUrl}}/IconsMain_v02.01_InstaceNormal.png" height="30" width="30"/>Home</a></li>
+      <li><a routerLink="crousel"><img src="{{imgBaseUrl}}/IconsMain_v02.01_Edit.png" height="30" width="30"/>Home</a></li>
+      <li><a routerLink="chat"><img src="{{imgBaseUrl}}/IconsMain_v02.01_ChatNormal.png" height="30" width="30" data-toggle="tooltip" data-placement="right" title="Chat"/>Chat</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="main">
+  <router-outlet></router-outlet>
+</div>

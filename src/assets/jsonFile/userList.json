@@ -1,0 +1,131 @@
+{  
+    "status":"success",
+    "list":[  
+       {  
+          "userId":100193,
+          "extn":"193",
+          "lobName":"Motor",
+          "rollName":"Medical-Claims",
+          "active":true,
+          "userName":"Neeba EM",
+          "iconPath":"/assets/images/user_img/avatar-1606916_960_720.png",
+          "busyStatus":false,
+          "entityId":133,
+          "entityType":"Employee",
+          "entityIconPath":null,
+          "entityName":"",
+          "didList":[  
+ 
+          ],
+          "currentState":[  
+             "loggedout",
+             "idle"
+          ]
+       },
+       {  
+          "userId":100192,
+          "extn":"192",
+          "lobName":"Motor",
+          "rollName":"Sales-GM",
+          "active":true,
+          "userName":"Ramesh  Reddy Nellore",
+          "iconPath":"/assets/images/user_img/default_female300x300-af1ea9327d6293733a8874dbd97ce49e.png",
+          "busyStatus":false,
+          "entityId":71,
+          "entityType":"Employee",
+          "entityIconPath":null,
+          "entityName":"",
+          "didList":[  
+ 
+          ],
+          "currentState":[  
+             "loggedout",
+             "idle"
+          ]
+       },
+       {  
+          "userId":100194,
+          "extn":"194",
+          "lobName":"Medical",
+          "rollName":"Medical-CRM",
+          "active":true,
+          "userName":"Ruchika",
+          "iconPath":"/assets/images/user_img/man-156584_640.png",
+          "busyStatus":false,
+          "entityId":137,
+          "entityType":"Employee",
+          "entityIconPath":null,
+          "entityName":"",
+          "didList":[  
+ 
+          ],
+          "currentState":[  
+             "loggedout",
+             "idle"
+          ]
+       },
+       {  
+          "userId":100197,
+          "extn":"197",
+          "lobName":"Medical",
+          "rollName":null,
+          "active":true,
+          "userName":"Ahamed Nasir Ahmed Rasheed",
+          "iconPath":"/assets/images/user_img/matureman1-512.png",
+          "busyStatus":false,
+          "entityId":73,
+          "entityType":"Employee",
+          "entityIconPath":null,
+          "entityName":"",
+          "didList":[  
+ 
+          ],
+          "currentState":[  
+             "loggedout",
+             "idle"
+          ]
+       },
+       {  
+        "userId":100157,
+        "extn":"197",
+        "lobName":"Employee",
+        "rollName":null,
+        "active":true,
+        "userName":"Chandan singh",
+        "iconPath":"/assets/images/user_img/oscar_boy-512.png",
+        "busyStatus":false,
+        "entityId":77,
+        "entityType":"Employee",
+        "entityIconPath":null,
+        "entityName":"Chandan",
+        "didList":[  
+
+        ],
+        "currentState":[  
+           "loggedin",
+           "idle"
+        ]
+     },
+     {  
+        "userId":1001067,
+        "extn":"117",
+        "lobName":"Employee",
+        "rollName":null,
+        "active":true,
+        "userName":"Nitin Patra",
+        "iconPath":"/assets/images/user_img/Matthew_school_boy-512.png",
+        "busyStatus":false,
+        "entityId":11,
+        "entityType":"Employee",
+        "entityIconPath":null,
+        "entityName":"",
+        "didList":[  
+
+        ],
+        "currentState":[  
+           "loggedin",
+           "idle"
+        ]
+     }
+    ]
+ }

@@ -1,0 +1,7 @@
+.cw{width: 45px;}
+.dis_table_cell img:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.04);
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+}

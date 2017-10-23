@@ -1,0 +1,17 @@
+.form-wrapper{
+    width: 330px;
+    height: 350px;
+    margin: 10.4% auto;
+    padding: 1px 10px;
+    box-shadow: 0 0px 2px 1px rgb(204,204,204);
+    color: rgba(0,0,0,0.8);
+}
+.cust_en_input{
+    height: 40px;
+    border-radius: 0px !important;
+    background: rgb(220, 220, 220);
+}
+.btn.cust_btn {background: none;border-radius: 0px !important;outline: none !important;}
+.btn.cust_btn.success {color: #148335;border-color: #148335;}
+.btn.cust_btn.success:hover, .btn.cust_btn.success:focus {background: rgba(11, 152, 71, 0.94);color: #fff;transition: all 0.2s linear;}
+  

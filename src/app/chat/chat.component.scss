@@ -1,0 +1,118 @@
+.chat-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.group-activity-area{
+    width:20%;
+    max-width: 350px;
+    min-width: 195px;
+    float: left;
+    height: 100%;
+}
+.msg-area{
+    width: calc(100% - 20% - 2px);
+    float: right;
+    height: 100%;
+}
+.activity-header{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 2px;
+}
+.activity-header .top{
+    width: 100%;
+    height: 50%;
+    display: table;
+}
+.activity-header .top .dis_table_cell:hover{
+    cursor: pointer;
+    box-shadow: inset 0px -2px 0px 0px #007bff;
+    transition: box-shadow 0.4s ease-in-out;
+}
+.activity-header .bottom{
+    width: 100%;
+    height: 50%;
+    display: table;
+}
+.activity-body{
+    width: 100%;
+    height: calc(100% - 72px);
+}
+.activity-body .contacts-wrapper{
+    height: calc(100% - 50px);
+}
+.activity-body .action-control{
+    position: relative;
+    height: 50px;
+    padding: 5px;
+}
+.contacts-row{
+    padding-top: 5px;
+    margin-bottom: 7px;
+}
+.contacts-row::after, .contacts-row::before{
+    display: table;
+    content: " ";
+}
+.contacts-row::after{
+    clear: both;
+}
+.contacts-row .flex-row{
+    display: flex;
+    align-items: center;
+}
+.contacts-row .cont-img{
+    flex: 0 0 auto;
+}
+.contacts-row .cont-txt{
+    flex: 1 1 auto;
+    padding-left: 7px;
+    padding-right: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    width: calc(100% - 61px);
+}
+.link{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.avt{
+    display: block;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+    line-height: normal;
+    position: relative;
+}
+.avt-img{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+.img_s36x36{
+    width: 36px;
+    height: 36px;
+}
+.u-noWrapWithEllipsis{
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+}
+.u-cont{
+    padding: 0 5px;
+}
+.u-select{
+    width: 25px;
+}
+.u-select md-checkbox{
+    vertical-align: middle;
+}
+.u-name{
+    color: #1C9963 !important;
+}
+.fs_12{font-size: 12px!important;}
+.fs_8{font-size: 0.8rem;font-weight: 500;color:#848484;}
+.fs_8.active{color:#25a8dc;box-shadow: inset 0px -2px 0px 0px #007bff;}
+.vrt_align{vertical-align: middle;}
+

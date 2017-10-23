@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; /* theme support for materials*/
+/* custom check-box */
+input[type=checkbox]{display: none;}
+input[type=checkbox] + label{cursor: pointer;}
+input[type=checkbox] + label:before{content: "";background-color: white;border: 1px solid #ccc;display: inline-block;font-size: 12px;height: 16px;width: 16px;line-height: 16px;
+vertical-align: middle;text-align: center;cursor:pointer;color: rgb(92,92,92);}
+input[type=checkbox]:checked + label:before{content: "\2714";font-size: 16px;color: green;border-color: green;transition: all 0.2s ease-in-out;}
+
+/* custom inputs */
+.input-group{position: relative;}
+.input-group .fx-addon{position: absolute;}
+.cust_search_input{border:0!important;box-shadow: none!important;outline: none!important;background: initial!important;}
+
+/* structure background */
+.bg_w{background: #fff;}
+.bg_p{background: #2196F3;}
+.background{background: #ccc;}
+.no_bg{background: initial!important;}
+.fh{height: 100%;}
+.cp{cursor: pointer;}
+
+/* display table */
+.dis_table{display: table;width:100%;}
+.dis_table_cell{display: table-cell;vertical-align: middle;text-align: center;}
+
+/* padding - marging */
+.pLR_15{padding-left: 15px;padding-right: 15px;}
+
+/* borders */
+.bdr{border:1px solid}
+.bdr_Rt{border-right:1px solid}
+.bdr_Lt{border-left:1px solid}
+.bdr_Tp{border-top:1px solid}
+.bdr_Bt{border-bottom:1px solid}
+.bdr, .bdr_Rt, .bdr_Lt, .bdr_Tp, .bdr_Bt{border-color: #ccc !important;}
+.no_bdr{border:none!important;}
+
+/* position */
+.ps_rlt{position: relative;}
+.ps_abs{position: absolute;}
+
+/* outline buttons */
+.btn.btn-outline-invert{border-color: #212529;background-color: initial;}
+.btn.btn-outline-invert:hover{background-color: #212529;color: #fff;}
+.btn[class*="btn-outline-"]{border-radius: 0;}
+

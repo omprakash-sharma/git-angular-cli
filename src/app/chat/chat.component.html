@@ -1,0 +1,75 @@
+<div class="chat-wrapper">
+  <div class="group-activity-area">
+    <div class="activity-header bg_w">
+      <div class="top bdr_Bt">
+        <div id="contacts" class="dis_table_cell fs_8 bdr_Rt" style="width:42.5%" [class.active]="activityView ==='contacts'" (click)="openActivity('contacts')">
+          <img src="{{imgBaseUrl}}/IconsMain_v03.01_ContactList.png" height="25" width="25"/>
+          <span>Contacts</span>
+        </div>
+        <div id="recent" class="dis_table_cell fs_8 bdr_Rt" style="width:42.5%" [class.active]="activityView ==='recent'" (click)="openActivity('recent')">
+          <img src="{{imgBaseUrl}}/IconsMain_v03.01_Recent.png" height="25" width="25"/>
+          <span>Recent</span>
+        </div>
+        <div class="dis_table_cell fs_8" style="width:15%" [class.active]="activityView ==='newGroup'" (click)="openActivity('newGroup')">
+          <img src="{{imgBaseUrl}}/IconsMain_v04.02_GroupAdd.png" height="25" width="25"/>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="dis_table_cell bdr_Rt" style="width:85%;">
+          <div class="input-group">
+            <input type="search" class="form-control cust_search_input" placeholder="search..."/>
+            <img class="fx-addon" src="{{imgBaseUrl}}/IconsMain_v02.01_Search.png" height="20" width="20" style="top:7px;right:4px;"/>
+          </div>
+        </div>
+        <div class="dis_table_cell" style="width:15%;">
+          <i class="material-icons cp" [mdMenuTriggerFor]="filter">photo_filter</i>
+          <md-menu #filter="mdMenu">
+            <button md-menu-item>
+              <i class="material-icons vrt_align">flip_to_back</i>
+              <span class="vrt_align">Invert Theme</span>
+            </button>
+            <button md-menu-item disabled>
+              <i class="material-icons vrt_align">group_add</i>
+              <span class="vrt_align">Create Group</span>
+            </button>
+            <button md-menu-item>
+              <i class="material-icons vrt_align">notifications_off</i>
+              <span class="vrt_align">Disable alerts</span>
+            </button>
+          </md-menu>
+        </div>
+      </div>
+    </div>
+    <div class="activity-body bg_w">
+      <div class="contacts-wrapper">
+        <div class="contacts-row" *ngFor="let users of allUsers">
+          <div class="u-cont">
+            <div class="flex-row">
+                <div class="cont-img">
+                  <a class="link avt cp">
+                    <img class="avt-img img_s36x36" src="{{users.iconPath}}"/>
+                  </a>
+                </div>
+                <div class="cont-txt u-noWrapWithEllipsis cp">
+                  <div class="u-name u-noWrapWithEllipsis">{{users.userName}}</div>
+                  <div class="fs_12 u-noWrapWithEllipsis"><img height="18" width="18" src="{{imgBaseUrl}}/IconsMain_v03.01_Category_Red.png"/>left 7min ago</div> 
+                </div>
+                <div class="u-select">
+                    <md-checkbox [(ngModel)]="selectedUser[users.userId]"></md-checkbox>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="action-control bdr_Tp">
+        <button type="button" class="btn btn-outline-invert" (click)="clearSelection()" id="clear_selection">Clear</button>
+        <button type="button" class="btn btn-outline-success" (click)="createNewGroup()">Create Group</button>
+      </div>
+    </div>
+  </div>
+  <div class="msg-area">
+    {{selectedUser|json}}
+
+    
+  </div>
+</div>

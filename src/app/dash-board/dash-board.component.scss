@@ -1,0 +1,14 @@
+.dash-board-wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.dash-board-header{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 2px;
+}
+.dash-board-body{
+    width: 100%;
+    height: calc(100% - 45px);
+}
