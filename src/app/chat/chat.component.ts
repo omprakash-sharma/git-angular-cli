@@ -15,26 +15,25 @@ export class ChatComponent implements OnInit {
   imgBaseUrl = 'assets/images';
   fs_color = {active:false};
   // initialize variable
-  public activityView:string;
+  public activityView:string = "contacts";
   public allUsers:[any];
-  public selectedUser = {};
+  public selectedUsers = {};
+  public selectedUser: {} | userContacts;
 
   constructor(private chatService:ChatServiceService) { }
 
   ngOnInit() { 
     this.chatService.getAllUsers('userList').subscribe(response => this.allUsers = response.list, error => console.log(error));
-    //console.log(this.allUsers)
-    // clear selection
-    // $('#clear_selection').on('click', function() {
-    //   alert("clear")
-    //   this.selectedUser = {};
-    //   return;
-    // })
   }
  
   openActivity(activity){ 
     console.log(this.allUsers)
+    
     switch(activity){
+      case 'contacts':
+      case 'recent':
+      case 'newGroup':
+        this.forgetSelection();
       case 'contacts':
         this.activityView = 'contacts';
         break;
@@ -50,11 +49,36 @@ export class ChatComponent implements OnInit {
 
   // clear selected users
   clearSelection(){
-    this.selectedUser = {};
+    this.selectedUsers = {};
   }
   // create new group
   createNewGroup(){
     
   }
+  // create new chat
+  createNewChat(userData){
+    this.selectedUser = userData;
+  }
+  // reset selection on tab change
+  forgetSelection(){
+    this.selectedUsers = {};
+    this.selectedUser = {};
+  }
+}
 
+export interface userContacts{
+  active: boolean,
+  busyStatus: boolean,
+  currentState: [string],
+  didList: [any],
+  entityIconPath: string,
+  entityId: number,
+  entityName: string,
+  entityType: string,
+  extn: number,
+  iconPath: string,
+  lobName: string,
+  rollName: string,
+  userId: number,
+  userName: string
 }

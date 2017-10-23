@@ -38,8 +38,15 @@
     width: 100%;
     height: calc(100% - 72px);
 }
-.activity-body .contacts-wrapper{
+.activity-body .contacts-wrapper, .activity-body .create-new-group-wrapper, .activity-body .recent-group-wrapper{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.activity-body .create-new-group-wrapper{
     height: calc(100% - 50px);
+}
+.activity-body .contacts-wrapper, .activity-body .recent-group-wrapper{
+    height: 100%;
 }
 .activity-body .action-control{
     position: relative;
@@ -48,7 +55,9 @@
 }
 .contacts-row{
     padding-top: 5px;
-    margin-bottom: 7px;
+    padding-bottom: 2px;
+    margin-bottom: 1px;
+    box-shadow: 0 1px 0 0 #ccc;
 }
 .contacts-row::after, .contacts-row::before{
     display: table;
@@ -70,7 +79,11 @@
     padding-right: 5px;
     font-size: 14px;
     line-height: 1.4;
-    width: calc(100% - 61px);
+    width: calc(100% - 36px);
+}
+.contacts-row:hover, .contacts-row.selected{
+    background: rgba(0,0,0,0.07);
+    box-shadow: inset 3px 0 0 0 #ff4081;
 }
 .link{
     color: inherit;

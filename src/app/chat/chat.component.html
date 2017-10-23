@@ -40,9 +40,9 @@
         </div>
       </div>
     </div>
-    <div class="activity-body bg_w">
-      <div class="contacts-wrapper">
-        <div class="contacts-row" *ngFor="let users of allUsers">
+    <div class="activity-body bg_w" *ngIf="activityView ==='newGroup'">
+      <div class="create-new-group-wrapper">
+        <div class="contacts-row" [class.selected]="selectedUsers[users.userId]" *ngFor="let users of allUsers">
           <div class="u-cont">
             <div class="flex-row">
                 <div class="cont-img">
@@ -50,12 +50,12 @@
                     <img class="avt-img img_s36x36" src="{{users.iconPath}}"/>
                   </a>
                 </div>
-                <div class="cont-txt u-noWrapWithEllipsis cp">
+                <div class="cont-txt cp" style="width:calc(100% - 61px);">
                   <div class="u-name u-noWrapWithEllipsis">{{users.userName}}</div>
                   <div class="fs_12 u-noWrapWithEllipsis"><img height="18" width="18" src="{{imgBaseUrl}}/IconsMain_v03.01_Category_Red.png"/>left 7min ago</div> 
                 </div>
                 <div class="u-select">
-                    <mat-checkbox [(ngModel)]="selectedUser[users.userId]"></mat-checkbox>
+                    <mat-checkbox [(ngModel)]="selectedUsers[users.userId]"></mat-checkbox>
                 </div>
             </div>
           </div>
@@ -66,10 +66,42 @@
         <button type="button" class="btn btn-outline-success" (click)="createNewGroup()">Create Group</button>
       </div>
     </div>
+
+    <div class="activity-body bg_w" *ngIf="activityView ==='recent'">
+      <div class="recent-group-wrapper">
+        recent chat list will come here....
+      </div>
+    </div>
+
+    <div class="activity-body bg_w" *ngIf="activityView ==='contacts'">
+      <div class="contacts-wrapper">
+        <div class="contacts-row" [class.selected]="selectedUser === users" *ngFor="let users of allUsers">
+          <div class="u-cont">
+            <div class="flex-row">
+                <div class="cont-img">
+                  <a class="link avt cp">
+                    <img class="avt-img img_s36x36" src="{{users.iconPath}}"/>
+                  </a>
+                </div>
+                <div class="cont-txt cp" (click)="createNewChat(users)">
+                  <div class="u-name u-noWrapWithEllipsis">{{users.userName}}</div>
+                  <div class="fs_12 u-noWrapWithEllipsis"><img height="18" width="18" src="{{imgBaseUrl}}/IconsMain_v03.01_Category_Red.png"/>left 7min ago</div> 
+                </div>
+                <!-- <div class="u-select">
+                    <mat-checkbox [(ngModel)]="selectedUser[users.userId]"></mat-checkbox>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <div class="msg-area">
-    {{selectedUser|json}}
-
+    {{selectedUsers|json}}
+    <div class="msg-window" *ngIf="selectedUser">
+      Let's start chat with: <b>{{selectedUser.userName}}</b>
+    </div>
     
   </div>
 </div>
