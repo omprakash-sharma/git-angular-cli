@@ -27,13 +27,9 @@ export class ChatComponent implements OnInit {
   }
  
   openActivity(activity){ 
-    console.log(this.allUsers)
-    
+    //console.log(this.allUsers)
+    this.forgetSelection();
     switch(activity){
-      case 'contacts':
-      case 'recent':
-      case 'newGroup':
-        this.forgetSelection();
       case 'contacts':
         this.activityView = 'contacts';
         break;

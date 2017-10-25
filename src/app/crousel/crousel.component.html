@@ -28,55 +28,21 @@
 </div>
 </div> -->
 <div class="section2">
-
-  <ngx-carousel  
-    [inputs]="carouselBanner" 
-    [inputsLength]="carouselBannerItems.length"
-    (carouselLoad)="carouselBannerLoad($event)">
-        <ngx-item NgxCarouselItem  class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
-            <img src="{{Banner.name}}">
-        </ngx-item>
-
-      <button class='leftRs'></button>
-      <button class='rightRs'></button>
-  </ngx-carousel>
-
-</div>
-
-<div class="section3">
-  <div class="pull-left" style="width:80%;">
-    <div class="cust_carousel_container">
-      <!-- carousel container -->
-      <div class="inner_carousel">
-        
-      </div>
-      <!-- carousel indecator -->
-      <div class="indicator">
-        <ul>
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+  <div class="col-5">
+      <ngx-carousel  
+      [inputs]="carouselBanner" 
+      (carouselLoad)="carouselBannerLoad($event)">
+          <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
+              <img height="200" width="100%" src="{{Banner.name}}">
+          </ngx-item>
+    
+        <button class='leftRs' NgxCarouselPrev>
+          <!-- <i class="material-icons">keyboard_arrow_left</i> -->
+        </button>
+        <button class='rightRs' NgxCarouselNext>
+          <!-- <i class="material-icons">keyboard_arrow_right</i> -->
+        </button>
+      </ngx-carousel>
   </div>
-  <div class="pull-right" style="width:20%">
-    <ngx-carousel  
-    [inputs]="carouselBanner" 
-    [inputsLength]="carouselBannerItems.length"
-    (carouselLoad)="carouselBannerLoad($event)">
-        <ngx-item NgxCarouselItem  class="bannerStyle" *ngFor="let Banner of carouselBannerItems">
-            <img height="100" width="100%" src="{{Banner.name}}">
-            <!-- <div class="img-holder" style="background:url({{Banner.name}})"></div> -->
-        </ngx-item>
-        <div>Tiltle</div>
-      <button NgxCarouselPrev  class='leftRs'>
-        <!-- <i class="material-icons">keyboard_arrow_left</i> -->
-      </button>
-      <button NgxCarouselNext class='rightRs'>
-        <!-- <i class="material-icons">keyboard_arrow_right</i> -->
-      </button>
-  </ngx-carousel>
-  </div>
+  
 </div>

@@ -13,19 +13,17 @@ export class CrouselComponent implements OnInit {
   items: Array<any> = [];
   public carouselBannerItems: Array<any>;
   public carouselBanner: Carousel;
-  // public carouselBanner = {}
-  constructor() { 
+  constructor() {
     this.items = [
-      {name:'assets/images/crousel_img/animal1.jpg'},
-      {name:'assets/images/crousel_img/animal2.jpg'},
-      {name:'assets/images/crousel_img/animal3.jpg'},
-      {name:'assets/images/crousel_img/wind1.jpg'},
-      {name:'assets/images/crousel_img/wind2.jpg'}
-    ];
-  }
+      {name:'assets/images/carousel_img/animal1.jpg'},
+      {name:'assets/images/carousel_img/animal2.jpg'},
+      {name:'assets/images/carousel_img/animal3.jpg'},
+      {name:'assets/images/carousel_img/wind1.jpg'},
+      {name:'assets/images/carousel_img/wind2.jpg'}
+    ]; 
+   }
 
   ngOnInit() {
-
     this.carouselBannerItems = this.items;
     this.carouselBanner = {
       grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
@@ -33,9 +31,9 @@ export class CrouselComponent implements OnInit {
       speed: 500,
       interval: 4000,
       point: true,
-      load: 3,
-      loop: true,
-      custom: 'baner',
+      load: 2,
+      loop: true, 
+      custom: 'tile',
       touch: true,
       dynamicLength: true
     }
@@ -43,9 +41,8 @@ export class CrouselComponent implements OnInit {
       $('.ngxcarouselPoint').css({'background-color':'#ddd'});
       $('.ngxcarouselPoint ul').css({'padding':'0px', 'padding-bottom':'4px'});
       $('.ngxcarouselPoint ul li').css({'padding':'2px'});
-      $('.ngxcarouselPoint ul li.active').css({'transform':'scale(1.4)'});
+      //$('.ngxcarouselPoint ul li.active').css({'transform':'scale(1.4)'});
     },300)
-    
   }
 
   public carouselBannerLoad(evt: any) {
@@ -56,8 +53,8 @@ export class CrouselComponent implements OnInit {
       //      this.carouselBannerItems.push(i);
       //    }
       //  }
-     // $('.ngxcarouselPoint').css({'background-color':'#ccc'});
-      //$('.ngxcarouselPoint').on('click',function(){alert("called")})
+      // $('.ngxcarouselPoint').css('background-color','#fff');
+      // $('.ngxcarouselPoint').on('click',function(){alert("called")})
   };
 
 
@@ -86,5 +83,5 @@ export class Grid {
   all: number;
 }
  
-export type Custom = 'baner';
+export type Custom = 'tile';
 export type Animate = 'lazy';

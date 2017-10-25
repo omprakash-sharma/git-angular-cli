@@ -124,8 +124,27 @@
 .u-name{
     color: #1C9963 !important;
 }
+.u-info{
+    display: flex;
+    height: 45px;
+    margin-bottom: 1px;
+}
+.u-action{
+    display: flex;
+    height: 50px;
+    margin-top: 1px;
+}
+.u-msg{
+    display: flex;
+    height: calc(100% - 95px);
+}
 .fs_12{font-size: 12px!important;}
 .fs_8{font-size: 0.8rem;font-weight: 500;color:#848484;}
 .fs_8.active{color:#25a8dc;box-shadow: inset 0px -2px 0px 0px #007bff;}
 .vrt_align{vertical-align: middle;}
 
+@media only screen and (max-width: 1040px){
+    .msg-area{
+        width: calc(100% - 195px - 2px)!important;
+    }
+}
